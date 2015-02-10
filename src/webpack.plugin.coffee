@@ -36,13 +36,13 @@ module.exports = (BasePlugin) ->
 					# Build the Webpack options.
 					webpackOpts = file.get('webpack')
 					webpackOpts = {} if typeof webpackOpts is 'boolean'
-					webpackOpts.entry = './' + file.get('relativeOutPath')
+					webpackOpts.entry = './' + file.get('outFilename')
 					webpackOpts.context = file.get('outDirPath')
 
 					# Set up the output paths.
 					webpackOpts.output = {
 						path: file.get('outDirPath')
-						filename: file.get('relativeOutPath')
+						filename: file.get('outFilename')
 					}
 
 					# Provide the default configuration options if needed.
