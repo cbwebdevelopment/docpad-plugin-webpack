@@ -47,11 +47,11 @@
             if (typeof webpackOpts === 'boolean') {
               webpackOpts = {};
             }
-            webpackOpts.entry = './' + file.get('relativeOutPath');
+            webpackOpts.entry = './' + file.get('outFilename');
             webpackOpts.context = file.get('outDirPath');
             webpackOpts.output = {
               path: file.get('outDirPath'),
-              filename: file.get('relativeOutPath')
+              filename: file.get('outFilename')
             };
             for (key in config) {
               if (!__hasProp.call(config, key)) continue;
