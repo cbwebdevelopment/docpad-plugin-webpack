@@ -57,6 +57,7 @@
   },
   "main": "./out/webpack.plugin.js",
   "scripts": {
-    "test": "node ./out/webpack.test.js"
+    "test": "node ./out/webpack.test.js",
+    "postinstall": "cake compile"
   }
 }
